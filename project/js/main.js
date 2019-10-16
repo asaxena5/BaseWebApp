@@ -16,7 +16,7 @@ function initializeStreamListener() {
 
 // This function gets called with the new message information.
 // It gets the user information and uses both to add the post to the database.
-function addMessage(body, title) {
+function addMessage(body) {
   var user = firebase.auth().currentUser;
   var authorPic = user.photoURL;
   var author = user.displayName;
@@ -24,7 +24,6 @@ function addMessage(body, title) {
   var postData = {
     author: author,
     authorPic: authorPic,
-    title: title,
     body: body
   };
 
@@ -37,9 +36,8 @@ function addMessage(body, title) {
 // Uses jQuery to get the message info and passes it to 'addMessage to actually submit the info to firebase.
 function handleMessageFormSubmit() {
   var body = $('#new-post-body').val();
-  var title = $('#new-post-title').val();
 
-  addMessage(body, title);
+  addMessage(body);
   document.getElementById("message-form")
 }
 

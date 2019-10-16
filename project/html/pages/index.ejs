@@ -9,42 +9,42 @@
   <!-- the classes 'page-header' and 'btn btn-default' create bootstrap components.  -->
   <!-- Check out more components here: http://getbootstrap.com/components/ -->
   <div class="page-header">
-    <h1>Stream</h1>
+    <h1>Aashna Saxena</h1>
+    <button id="login-button" class="btn btn-default" type="button" onclick="toggleSignIn()">
+      Log In
+    </button>
   </div>
 
-  <button id="login-button" class="btn btn-default" type="button" onclick="toggleSignIn()">
-    Log In
-  </button>
+
 
   <section id="add-post">
-    <h2 class="mdl-card__title-text">
-      New Post
+    <h2 class="create-team">
+      Create a Team
     </h2>
 
     <form id="message-form" action="#">
       <div class="form-group">
-        <label for="new-post-title">
-          Post title...
-        </label>
-        <input type="text" id="new-post-title">
-      </div>
-
-      <div class="form-group">
         <label for="new-post-body">
-          Post message...
+          Enter your selections below:
         </label>
-        <textarea rows="3" id="new-post-body"></textarea>
+        <select id="new-post-body" name="members" multiple>
+          <option value="kate">Kate McKinnon</option>
+          <option value="kenan">Kenan Thompson</option>
+          <option value="cecily">Cecily Strong</option>
+          <option value="aidy">Aidy Bryant</option>
+        </select>
+
+        <button id="add-post" type="submit" class="btn btn-default" onclick="handleMessageFormSubmit()">
+          Add post
+        </button>
+
       </div>
 
-      <button type="submit" class="btn btn-default" onclick="handleMessageFormSubmit()">
-        Add post
-      </button>
+
+
+
     </form>
   </section>
-
-  <div id="stream">
-    Stream goes here:
-  </div>
 
 </body>
 
