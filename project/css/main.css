@@ -24,6 +24,10 @@ p {
   flex-direction: column;
 }
 
+select {
+  height: 260px !important;
+}
+
 #add-post {
   margin: 5px;
 }
